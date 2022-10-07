@@ -1,0 +1,19 @@
+.navbar {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      border-bottom: 1px solid black;
+      transition: all 0.3s;
+    }
+  }
+}

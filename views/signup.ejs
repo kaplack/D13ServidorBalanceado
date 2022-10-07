@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs'); %>
+  <body>
+    <%- include('./partials/header.ejs'); %>
+    <section class="signup">
+      <div class="signup__box">
+        <div class="signup__box--main">
+          <h1>Registro</h1>
+          <div class="signup-form">
+            <form action="/signup" method="post">
+              <div class="formInput input">
+                <input
+                  type="text"
+                  placeholder="Ingrese el nombre del usuario"
+                  name="user"
+                  id="user"
+                  required
+                />
+              </div>
+              <div class="formInput input">
+                <input
+                  type="email"
+                  placeholder="Ingrese su correo"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div class="formInput input">
+                <input
+                  type="password"
+                  placeholder="Ingrese su contraseña"
+                  name="password"
+                  id="password"
+                  required
+                />
+              </div>
+
+              <button id="signup__btn">Registrar</button>
+            </form>
+          </div>
+          <a href="/login">Ingresar</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

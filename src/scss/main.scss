@@ -1,0 +1,43 @@
+@import "./abstract/mixin";
+@import "./base/base";
+
+@import "components/main-nav";
+@import "components/form";
+
+.products {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px;
+}
+
+.products__item {
+  flex: 1 0 200px;
+
+  overflow: hidden;
+}
+
+.products__item--img {
+  height: 200px;
+}
+
+.products__item img {
+  width: 100%;
+  height: 100%;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.user-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+#username {
+  color: red;
+}

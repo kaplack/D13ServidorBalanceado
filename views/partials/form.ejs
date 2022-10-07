@@ -1,0 +1,32 @@
+<form
+  action="api/productos"
+  id="formulario"
+  enctype="multipart/form-data"
+  method="post"
+>
+  <div class="formInput">
+    <input type="text" placeholder="Nombre" name="title" id="name" />
+  </div>
+  <div class="formInput">
+    <textarea
+      name="description"
+      id="description"
+      placeholder="Descripcion"
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div>
+  <div class="formInput">
+    <input type="number" placeholder="Precio" name="price" id="price" />
+  </div>
+  <div class="formInput">
+    <input type="number" placeholder="Stock" name="stock" id="stock" />
+  </div>
+  <div class="formInput">
+    <input type="text" placeholder="Código" name="code" id="code" />
+  </div>
+  <div class="formInputFile">
+    <input type="file" name="myFile" id="file" />
+  </div>
+  <input type="submit" value="Publicar" />
+</form>

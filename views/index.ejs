@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles.css" />
+    <title>Chat websocket</title>
+  </head>
+  <body>
+    <div>
+      <h2 id="username">NN</h2>
+      <div class="chat-form">
+        <form action="">
+          <div class="formInput input">
+            <input type="email" placeholder="email" name="email" id="email" />
+          </div>
+          <div class="formInput input">
+            <input type="text" placeholder="nombre" name="nombre" id="nombre" />
+          </div>
+          <div class="formInput input">
+            <input
+              type="text"
+              placeholder="apellido"
+              name="apellido"
+              id="apellido"
+            />
+          </div>
+          <div class="formInput input">
+            <input type="number" placeholder="edad" name="edad" id="edad" />
+          </div>
+          <div class="formInput input">
+            <input type="text" placeholder="alias" name="alias" id="alias" />
+          </div>
+          <div class="formInput input">
+            <input type="text" placeholder="avatar" name="avatar" id="avatar" />
+          </div>
+          <div class="formInput input">
+            <input id="msn" name="msn" placeholder="mensaje" />
+          </div>
+
+          <button id="send">Send</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <div id="chat"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+  </body>
+</html>

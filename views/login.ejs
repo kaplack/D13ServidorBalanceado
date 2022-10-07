@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs'); %>
+  <body>
+    <%- include('./partials/header.ejs'); %>
+    <section>
+      <div>
+        <h2 id="username">Login de Usuario</h2>
+        <div class="login-form">
+          <form action="" method="post">
+            <div class="formInput input">
+              <input
+                type="text"
+                placeholder="Ingrese el nombre del usuario"
+                name="user"
+                id="user"
+              />
+            </div>
+            <div class="formInput input">
+              <input
+                type="password"
+                placeholder="Ingresa tu password"
+                name="password"
+                id="password"
+              />
+            </div>
+            <button id="send">Send</button>
+          </form>
+          <a href="/signup">Registrate</a>
+        </div>
+      </div>
+    </section>
+    <br />
+    <hr />
+    <div id="chat"></div>
+  </body>
+</html>

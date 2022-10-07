@@ -1,0 +1,18 @@
+form {
+  max-width: 350px;
+}
+
+.chat-form,
+.login-form {
+  max-width: 250px;
+}
+
+.formInput,
+.formInputFile {
+  margin-bottom: 10px;
+}
+.formInput input,
+.formInput textarea {
+  width: 100%;
+  padding: 5px;
+}
