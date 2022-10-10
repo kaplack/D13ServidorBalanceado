@@ -60,6 +60,7 @@ app.get("/", async (req, res) => {
   let currUser = usersData.filter((u) => u.username == user);
   res.render("main", {
     user: currUser[0],
+    PORT: parseArgv(process.argv).port,
   });
 });
 
