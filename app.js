@@ -13,8 +13,10 @@ import bcryptjs from "bcryptjs";
 import parseArgv from "minimist";
 import * as dotenv from "dotenv";
 import routerRandom from "./router/random.router.js";
-import OS from "os";
-import cluster from "cluster";
+//import pm2 from "pm2";
+// import OS from "os";
+// import cluster from "cluster";
+// import { CLIENT_RENEG_LIMIT } from "tls";
 
 dotenv.config();
 
@@ -118,31 +120,6 @@ app.get("/info", (req, res) => {
   });
 });
 
-// app.get("/test", (req, res) => {
-//   const numCPUs = OS.cpus().length;
-//   if (cluster.isMaster) {
-//     console.log(`Master ${process.pid} is running`);
-
-//     for (let i = 0; i < numCPUs; i++) {
-//       cluster.fork();
-//     }
-
-//     cluster.on("exit", (worker, code, signal) => {
-//       console.log(`worker ${worker.process.pid} died :(`);
-//     });
-//   } else {
-//     http
-//       .createServer((req, res) => {
-//         console.log(`Entro en el procesos ${process.pid}`);
-//         res.writeHead(200);
-//         res.end("hello");
-//       })
-//       .listen(8080);
-//     console.log(`Worker ${process.pid} start`);
-//   }
-//   res.send({ CPUs: numCPUs });
-// });
-
 io.on("connection", (socket) => {
   console.log("Somebody connected!");
 
@@ -163,7 +140,28 @@ io.on("connection", (socket) => {
 });
 
 const PORT = parseArgv(process.argv).port || 8080;
-// lo puedes correr con --> node app.js --port 7000
+// lo puedes correr con --> node app.js 7000
+console.log(parseArgv(process.argv));
+
+// pm2.connect(function (err) {
+//   if (err) {
+//     console.error(err);
+//     process.exit(2);
+//   }
+
+//   pm2.start(
+//     {
+//       script: "app.js",
+//       exec_mode: parseArgv(process.argv).modo || "fork",
+//     },
+//     (err, apps) => {
+//       pm2.disconnect();
+//       if (err) {
+//         throw err;
+//       }
+//     }
+//   );
+// });
 
 server.listen(PORT, () => {
   console.log("Running..." + PORT);
