@@ -5,7 +5,7 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "nodemon-w": "nodemon app.js",
     "sass-watch": "sass --no-source-map --watch src/scss/main.scss public/style.css",
     "dev": "npm-run-all --parallel sass-watch nodemon-w"
