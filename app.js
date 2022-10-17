@@ -139,7 +139,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = parseArgv(process.argv).port || 8080;
+const PORT = process.env.PORT || 8080;
 // lo puedes correr con --> node app.js 7000
 console.log(parseArgv(process.argv));
 
